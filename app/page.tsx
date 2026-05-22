@@ -6,8 +6,8 @@ import { Ticker } from '@/app/components/sections/Ticker';
 import { StatsRow } from '@/app/components/sections/StatsRow';
 import { About } from '@/app/components/sections/About';
 import { Leadership } from '@/app/components/sections/Leadership';
-//import { Award } from '@/app/components/sections/Award';
-import { SpeakingExpertise } from '@/app/components/sections/Award';
+import { Award } from '@/app/components/sections/Award';
+//import { SpeakingExpertise } from '@/app/components/sections/Award';
 import { Book } from '@/app/components/sections/Book';
 import { Speaking } from '@/app/components/sections/Speaking';
 import { Vision } from '@/app/components/sections/Vision';
@@ -24,7 +24,7 @@ export default function PortfolioPage() {
         <StatsRow />
         <About />
         <Leadership />
-        <SpeakingExpertise />
+        <Award />
         <Book />
         <Speaking />
         <Vision />
