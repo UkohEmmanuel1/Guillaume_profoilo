@@ -35,16 +35,11 @@ export function Award() {
             <div className="order-1 flex flex-col items-center gap-8 md:order-2">
 
               {/* Medallion focal point */}
-              <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-blue-600/15 bg-blue-600/[0.02] shadow-[0_0_0_6px_rgba(37,99,235,0.04)]">
-                <span className="text-2xl tracking-[0.15em] text-blue-600 font-medium">⚜</span>
-              </div>
+              
 
               {/* Marquee gallery rail */}
               <div className="marquee-wrap relative w-full max-w-[540px] overflow-hidden"
-                style={{
-                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
-                  maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
-                }}
+                
               >
                 <div
                   className="marquee-rail flex w-max gap-8"
