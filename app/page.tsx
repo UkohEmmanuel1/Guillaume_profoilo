@@ -11,7 +11,7 @@ import { Award } from '@/app/components/sections/Award';
 import { Book } from '@/app/components/sections/Book';
 import { Speaking } from '@/app/components/sections/Speaking';
 import { Vision } from '@/app/components/sections/Vision';
-import { Contact } from '@/app/components/sections/Contact';
+import  {Contact } from '@/app/components/sections/Contact';
 import { TICKER_ITEMS } from '@/app/constants/content';
 
 export default function PortfolioPage() {
