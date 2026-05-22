@@ -1,94 +1,126 @@
 import Image from 'next/image';
 import { Container } from '@/app/components/ui/Container';
-import { AWARD_TITLE, AWARD_SUBTITLE, AWARD_DATE } from '@/app/constants/content';
 
-const SLIDING_IMAGES = [
-  { src: '/assets/image_1.jpg', alt: 'Award Ceremony Document' },
-  { src: '/assets/image_2.jpg', alt: 'Chevalier Medal Close-up' },
-  { src: '/assets/image_3.jpg', alt: 'Official French Republic Insignia' },
-  { src: '/assets/image_1.jpg', alt: 'Award Ceremony Document' },
-  { src: '/assets/image_2.jpg', alt: 'Chevalier Medal Close-up' },
-  { src: '/assets/image_3.jpg', alt: 'Official French Republic Insignia' },
+// Production asset array - Duplicated explicitly for a seamless tracking loop
+const SCROLLING_IMAGES = [
+  { src: '/assets/about.jpg', alt: 'Keynote Speaker Opening Session' },
+  { src: '/assets/hero.jpg', alt: 'Panel Discussion Presentation' },
+  { src: '/assets/about.jpg', alt: 'Executive Q&A Workshop' },
+  // Exact duplicates to prevent snapping jumps on loop reload
+  { src: '/assets/about.jpg', alt: 'Keynote Speaker Opening Session Loop' },
+  { src: '/assets/hero.jpg', alt: 'Panel Discussion Presentation Loop' },
+  { src: '/assets/about.jpg', alt: 'Executive Q&A Workshop Loop' },
 ];
 
-export function Award() {
+const EXPERTISE_TOPICS = [
+  { id: '01', title: 'Government Relations & Policy' },
+  { id: '02', title: 'International Trade & Economics' },
+  { id: '03', title: 'ESG & Sustainable Business' },
+  { id: '04', title: 'Startup Ecosystem Development' },
+  { id: '05', title: 'Franco-African Business Relations' },
+  { id: '06', title: 'MSME Growth Strategies' },
+];
+
+export function SpeakingExpertise() {
   return (
     <>
+      {/* 1. Hardware Accelerated Marquee Keyframes Injection */}
       <style dangerouslySetInnerHTML={{__html: `
-        @keyframes rawMarquee {
+        @keyframes verticalMarquee {
           0% { transform: translate3d(0, 0, 0); }
-          100% { transform: translate3d(-50%, 0, 0); }
+          100% { transform: translate3d(0, -50%, 0); }
         }
-        .marquee-track-container:hover .marquee-moving-track {
+        .speaking-marquee-window:hover .speaking-moving-track {
           animation-play-state: paused !important;
         }
       `}} />
 
-      <section id="award" className="relative overflow-hidden border-y border-slate-100 bg-white px-6 py-16 sm:py-20 lg:p-10">
-
-        <div className="pointer-events-none absolute top-1/2 left-[-10%] z-0 h-[400px] w-[400px] rounded-full bg-blue-600/[0.01] blur-[80px]" />
+      {/* 2. Main Layout Canvas */}
+      <section id="speaking-expertise" className="relative bg-white py-16 sm:py-24 border-b border-slate-100 overflow-hidden">
+        
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <div className="absolute top-1/2 right-[-5%] h-[400px] w-[400px] rounded-full bg-blue-600/[0.01] blur-[100px]" />
+        </div>
 
         <Container className="relative z-10">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.3fr] md:items-center lg:grid-cols-[1.1fr_1.3fr]">
-
-            <div className="order-1 flex flex-col items-center gap-8 md:order-2">
-              <div className="marquee-track-container relative w-full max-w-[500px] overflow-hidden px-4 py-4"
-                style={{
-                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-                  maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-                }}
-              >
-                <div
-                  className="marquee-moving-track flex w-max gap-6"
-                  style={{ animation: 'rawMarquee 25s linear infinite' }}
+          <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-[1.1fr_1.3fr] lg:gap-16 xl:gap-20">
+            
+            {/* Left Column: Rolling Infinite Motion Image Track Frame */}
+            <div className="w-full">
+              <div className="relative p-3 bg-slate-50 rounded-xl border border-slate-200/60 shadow-[0_8px_30px_rgba(241,245,249,0.5)]">
+                
+                {/* Fixed Viewport Window with Top-and-Bottom Fade Masking */}
+                <div 
+                  className="speaking-marquee-window relative h-[320px] sm:h-[400px] w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-200/40"
+                  style={{
+                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)',
+                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)',
+                  }}
                 >
-                  {SLIDING_IMAGES.map((img, index) => (
-                    <div
-                      key={index}
-                      className="relative h-[200px] w-[150px] shrink-0 overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
-                    >
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        fill
-                        sizes="(max-width: 768px) 150px, 150px"
-                        className="object-cover object-center"
-                      />
-                    </div>
-                  ))}
+                  {/* Moving Continuous Track */}
+                  <div 
+                    className="speaking-moving-track flex flex-col gap-3 p-2"
+                    style={{ animation: 'verticalMarquee 22s linear infinite' }}
+                  >
+                    {SCROLLING_IMAGES.map((img, index) => (
+                      <div 
+                        key={index} 
+                        className="relative h-[160px] sm:h-[200px] w-full shrink-0 overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm"
+                      >
+                        <Image
+                          src={img.src}
+                          alt={img.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 550px"
+                          className="object-cover object-center brightness-[1.01] contrast-[1.01] transition-transform duration-500 hover:scale-[1.02]"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Image Footer Caption */}
+                <div className="mt-3 px-1 flex items-center justify-between text-[10px] uppercase tracking-widest text-slate-400 font-medium">
+                  <span>Keynote Highlights</span>
+                  <span>Live Scroll Track</span>
                 </div>
               </div>
-              <span className="text-center text-[10px] font-medium uppercase tracking-[0.25em] text-slate-400">
-                République Française
-              </span>
             </div>
 
-            <div className="order-2 md:order-1">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="h-px w-6 bg-blue-600/60" />
-                <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-600">
-                  Recognition · 2025
-                </span>
+            {/* Right Column: Speaking Expertise Content Info Layout */}
+            <div className="w-full">
+              
+              {/* Header block */}
+              <div className="mb-8 flex flex-col gap-2.5">
+                <div className="flex items-center gap-2.5 text-blue-600">
+                  <svg className="h-5 w-5 fill-none stroke-current stroke-[1.75]" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                  </svg>
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em]">
+                    Engagements
+                  </span>
+                </div>
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-slate-900 leading-tight">
+                  Speaking Expertise
+                </h2>
               </div>
 
-              <h2 className="mb-4 font-serif text-[clamp(1.6rem,2.5vw,3rem)] font-light leading-tight tracking-tight text-slate-900">
-                {AWARD_TITLE}
-              </h2>
-
-              <p className="mb-6 font-serif text-[1.05rem] italic leading-relaxed text-slate-500">
-                {AWARD_SUBTITLE}
-              </p>
-
-              <p className="mb-8 max-w-[540px] text-[15px] font-light leading-[1.8] text-slate-600">
-                On November 21, 2025, Guillaume Niarfeix was awarded the prestigious Chevalier de
-                l&apos;Ordre National du Mérite by the French Republic — one of France&apos;s highest
-                civilian honours.
-              </p>
-
-              <div className="inline-flex items-center gap-3 rounded-sm border border-blue-600/15 bg-blue-600/[0.02] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600 shadow-[0_1px_2px_rgba(37,99,235,0.02)]">
-                <span aria-hidden="true" className="text-xs">⚜</span>
-                <span>{AWARD_DATE}</span>
+              {/* 2-Column Grid Matrix */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                {EXPERTISE_TOPICS.map((topic) => (
+                  <div
+                    key={topic.id}
+                    className="group flex items-center gap-3.5 rounded-lg border border-slate-200/70 bg-white px-5 py-4 shadow-[0_1px_3px_rgba(241,245,249,0.4)] hover:border-blue-600/30 hover:bg-slate-50/40 transition-all duration-300"
+                  >
+                    <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500 group-hover:bg-blue-600 transition-colors duration-300" />
+                    
+                    <span className="text-[13px] sm:text-sm font-medium text-slate-700 tracking-tight leading-snug group-hover:text-slate-900 transition-colors duration-300">
+                      {topic.title}
+                    </span>
+                  </div>
+                ))}
               </div>
+
             </div>
 
           </div>
