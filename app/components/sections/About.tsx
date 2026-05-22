@@ -3,7 +3,7 @@ import { Container } from '@/app/components/ui/Container';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
 import { SITE_NAME, ABOUT_PARAGRAPHS, TIMELINE } from '@/app/constants/content';
 
-function LocalTimelineCard({ year, title, company, description }: { year: string; title: string; company?: string; description: string }) {
+function LocalTimelineCard({ year, role, org }: { year: string; role: string; org: string }) {
   return (
     <div className="group relative flex flex-col gap-1.5 transition-all duration-300">
       <div className="absolute -left-[31px] sm:-left-[43px] top-1.5 h-2.5 w-2.5 rounded-full border border-blue-500 bg-white group-hover:bg-blue-600 group-hover:scale-110 transition-all duration-300" />
@@ -13,11 +13,11 @@ function LocalTimelineCard({ year, title, company, description }: { year: string
       </span>
 
       <h4 className="font-serif text-base md:text-lg font-light tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
-        {title} {company && <span className="text-slate-400 font-sans text-xs md:text-sm font-light">| {company}</span>}
+        {role} {org && <span className="text-slate-400 font-sans text-xs md:text-sm font-light">| {org}</span>}
       </h4>
 
       <p className="text-xs md:text-sm font-light leading-[1.75] text-slate-500 max-w-[500px]">
-        {description}
+        {year === 'Present' ? 'Current executive leadership role shaping regional strategy and operations.' : year === 'Nov 2025' ? 'Awarded one of France\'s highest civilian honours by the Republic.' : 'Published thought-leadership work on energy transition and sovereignty.'}
       </p>
     </div>
   );
