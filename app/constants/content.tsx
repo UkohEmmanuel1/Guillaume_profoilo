@@ -124,4 +124,4 @@ export const BOOK_AUTHOR = SITE_NAME;
 export const VISION_QUOTE =
   "\"Africa's energy future is not a problem to be solved — it is an opportunity to be seized.\"";
 
-export const COPYRIGHT = `© 2025 ${SITE_NAME}. All rights reserved.`;
+export const COPYRIGHT = `© 2026 ${SITE_NAME}. All rights reserved.`;

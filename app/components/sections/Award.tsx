@@ -97,7 +97,7 @@ export function Award() {
               </p>
 
               <div className="inline-flex items-center gap-3 rounded-md border border-blue-600/15 bg-blue-600/[0.02] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600">
-                <span className="text-sm">⚜</span>
+
                 <span>{AWARD_DATE}</span>
               </div>
             </div>
