@@ -101,7 +101,7 @@ export function Hero() {
               Featured Publication
             </p>
             <h3 className="font-serif text-sm sm:text-base md:text-md text-white font-light italic leading-tight">
-              "Electrochoc" — Available Worldwide
+              "Electrochoc" Available Worldwide
             </h3>
           </div>
 

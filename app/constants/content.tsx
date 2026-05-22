@@ -13,10 +13,10 @@ export const NAV_LINKS: NavLink[] = [
 
 export const TICKER_ITEMS: string[] = [
   'SPIE West Africa',
-  'Franco-Nigerian Chamber of Commerce',
+  'Franco Nigerian Chamber of Commerce',
   "Chevalier de l'Ordre National du Mérite",
   'Energy Transition Leader',
-  'Electrochoc — Author',
+  'Electrochoc  Author',
   'Franco-African Business Diplomacy',
   'International Speaker',
 ];
@@ -35,14 +35,14 @@ export const HERO_HEADING_ACCENT = 'Energy Leadership';
 export const HERO_HEADING_LINE2 = 'Across Africa';
 
 export const HERO_DESCRIPTION =
-  'Managing Director of SPIE West Africa, President of the Franco-Nigerian Chamber of Commerce and Industry, Author, Speaker, and International Business Leader.';
+  'Managing Director of SPIE West Africa, President of the Franco Nigerian Chamber of Commerce and Industry, Author, Speaker, and International Business Leader.';
 
 export const ABOUT_PARAGRAPHS = [
   {
     text: '<strong>Guillaume Niarfeix</strong> is a distinguished French business executive whose career has been defined by transformative leadership at the intersection of <em>energy, infrastructure, and international diplomacy</em>. As Managing Director of SPIE West Africa, he leads one of the region\'s most strategically significant engineering and energy service operations.',
   },
   {
-    text: 'His appointment as <strong>President of the Franco-Nigerian Chamber of Commerce and Industry</strong> reflects his exceptional standing as a bridge between European expertise and African economic dynamism — championing bilateral trade, investment, and business collaboration at the highest levels.',
+    text: 'His appointment as <strong>President of the Franco Nigerian Chamber of Commerce and Industry</strong> reflects his exceptional standing as a bridge between European expertise and African economic dynamism  championing bilateral trade, investment, and business collaboration at the highest levels.',
   },
   {
     text: 'Beyond his executive roles, Guillaume has established himself as a <strong>thought leader</strong> and author, publishing <em>Electrochoc: Réarmer l\'énergie</em> — a compelling work addressing the critical challenges of energy transition and the strategic imperatives facing Africa and Europe in the 21st century.',
