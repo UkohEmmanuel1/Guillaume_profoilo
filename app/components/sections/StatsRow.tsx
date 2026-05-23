@@ -1,10 +1,9 @@
-import { STATS } from '@/app/constants/content';
 import { AnimatedCounter } from '@/app/components/ui/AnimatedCounter';
 
-export function StatsRow() {
+export function StatsRow({ stats }: { stats: any[] }) {
   return (
     <div className="grid grid-cols-2 border-b border-slate-200 md:grid-cols-4">
-      {STATS.map((stat, index) => (
+      {stats.map((stat: any, index: number) => (
         <div
           key={index}
           className="reveal-item border-r border-slate-200 px-6 py-8 sm:p-8 lg:p-10 opacity-0 transition-all duration-700 last:border-none hover:bg-blue-50 translate-y-7"

@@ -2,12 +2,9 @@
 
 import { Container } from '@/app/components/ui/Container';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
-import { Input } from '@/app/components/ui/Input';
-import { BlueButton } from '@/app/components/ui/BlueButton';
-import { SPEAKING_TOPICS } from '@/app/constants/content';
 import React from 'react';
 
-export function Speaking() {
+export function Speaking({ dict }: { dict: any }) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -25,12 +22,12 @@ export function Speaking() {
         {/* Adjusted Title Wrapping Fragment */}
         <div className="mb-14 md:mb-20 text-slate-900">
           <SectionHeader
-            label="Speaking"
+            label={dict.speaking.label}
             title={
               <>
-                Engage a World-Class
+                {dict.speaking.title}
                 <br className="hidden sm:block" />
-                <em className="font-serif italic text-blue-600 font-normal">Executive Speaker</em>
+                <em className="font-serif italic text-blue-600 font-normal">{dict.speaking.titleEm}</em>
               </>
             }
           />
@@ -42,12 +39,11 @@ export function Speaking() {
           {/* Left Column: Context Introduction & Interactive Agenda List */}
           <div className="w-full">
             <p className="mb-10 text-[15px] md:text-[16px] font-light leading-[1.8] text-slate-600 max-w-[560px]">
-              Guillaume Niarfeix brings a rare combination of operational authority and intellectual
-              depth to every stage appearance, sparking critical macro discussions worldwide.
+              {dict.speaking.description}
             </p>
 
             <ul className="my-6 list-none p-0 m-0">
-              {SPEAKING_TOPICS.map((topic) => (
+              {dict.speaking.topics.map((topic: { number: number; title: string }) => (
                 <li
                   key={topic.number}
                   className="group flex items-start gap-5 border-b border-slate-100 py-5 last:border-b-0 transition-colors duration-300"
@@ -72,33 +68,15 @@ export function Speaking() {
               
               <div className="mb-6 space-y-1.5">
                 <h3 className="font-serif text-xl font-light tracking-tight text-slate-900">
-                  Request an Engagement
+                  {dict.speaking.formTitle}
                 </h3>
                 <p className="text-xs font-light text-slate-500 leading-relaxed">
-                  Provide your event logistics below to check schedule availability.
+                  {dict.speaking.formDescription}
                 </p>
               </div>
 
-              {/* Booking Submission Node */}
-              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-                <div className="space-y-4">
-                  {/* Assuming your Input component is built to look high-end in light-mode */}
-                  <Input
-                    type="text"
-                    label="Your name"
-                    placeholder="Your name"
-                    autoComplete="name"
-                    className="w-full bg-white border-slate-200 focus:border-blue-600 rounded-md transition-colors"
-                  />
-                </div>
-                
-                <div className="mt-2">
-                  <BlueButton as="button" type="submit" className="w-full justify-center text-center py-3">
-                    Submit Inquiry →
-                  </BlueButton>
-                </div>
-              </form>
-
+             
+              
             </div>
           </div>
 

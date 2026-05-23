@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Container } from '@/app/components/ui/Container';
 
-export function Contact() {
+export function Contact({ dict }: { dict: any }) {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -30,16 +30,16 @@ export function Contact() {
           <div className="w-full space-y-6 sm:space-y-8">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-blue-700">
-                Contact & Advisory
+                {dict.contact.label}
               </div>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-slate-900 leading-[1.15]">
-                Connect for Strategic <br />
-                <em className="font-serif italic text-blue-600 font-normal">Initiatives & Panels</em>
+                {dict.contact.heading} <br />
+                <em className="font-serif italic text-blue-600 font-normal">{dict.contact.headingEm}</em>
               </h2>
             </div>
 
             <p className="text-[15px] md:text-[16px] font-light leading-[1.8] text-slate-600 max-w-[520px]">
-              Secure Guillaume Niarfeix for corporate governance, high-level international energy policy analysis, private institutional advisory briefings, or key media commentary.
+              {dict.contact.description}
             </p>
 
             {/* Direct Channel Access Info Row */}
@@ -51,9 +51,9 @@ export function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Executive Office</h4>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400">{dict.contact.officeLabel}</h4>
                   <a href="mailto:relations@guillaumeniarfeix.com" className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-colors">
-                    relations@guillaumeniarfeix.com
+                    {dict.contact.officeEmail}
                   </a>
                 </div>
               </div>
@@ -66,10 +66,10 @@ export function Contact() {
               
               <div className="mb-8 space-y-1.5">
                 <h3 className="font-serif text-xl font-light tracking-tight text-slate-900">
-                  Direct Correspondence Office
+                  {dict.contact.formTitle}
                 </h3>
                 <p className="text-xs font-light text-slate-500">
-                  Please submit details below to establish direct lines of inquiry.
+                  {dict.contact.formDescription}
                 </p>
               </div>
 
@@ -78,14 +78,14 @@ export function Contact() {
                 {/* Name Field Row */}
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-medium uppercase tracking-wider text-slate-500">
-                    Full Name
+                    {dict.contact.nameLabel}
                   </label>
                   <input
                     type="text"
                     required
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    placeholder="e.g., Jean-Marc Aubert"
+                    placeholder={dict.contact.namePlaceholder}
                     className="w-full bg-white border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 rounded-md px-4 py-3 text-sm transition-all shadow-sm outline-none placeholder:text-slate-400 text-slate-900"
                   />
                 </div>
@@ -93,14 +93,14 @@ export function Contact() {
                 {/* Email Field Row */}
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-medium uppercase tracking-wider text-slate-500">
-                    Corporate Email Address
+                    {dict.contact.emailLabel}
                   </label>
                   <input
                     type="email"
                     required
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                    placeholder="e.g., j.aubert@company.com"
+                    placeholder={dict.contact.emailPlaceholder}
                     className="w-full bg-white border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 rounded-md px-4 py-3 text-sm transition-all shadow-sm outline-none placeholder:text-slate-400 text-slate-900"
                   />
                 </div>
@@ -108,15 +108,15 @@ export function Contact() {
                 {/* Message Field Row */}
                 <div className="flex flex-col gap-1.5">
                   <label className="text-[11px] font-medium uppercase tracking-wider text-slate-500">
-                    Brief Briefing Scope
+                    {dict.contact.messageLabel}
                   </label>
                   <textarea
                     rows={4}
                     required
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    placeholder="Outline your invitation parameters or project scope..."
-                    className="w-full bg-white border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 rounded-md px-4 py-3 text-sm transition-all shadow-sm outline-none resize-none placeholder:text-slate-400 text-slate-900"
+                    placeholder={dict.contact.messagePlaceholder}
+                    className="w-full bg-white border border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 rounded-md px-4 py-3 text-sm transition-all shadow-sm outline-none placeholder:text-slate-400 text-slate-900"
                   />
                 </div>
 
@@ -127,7 +127,7 @@ export function Contact() {
                     className="w-full inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-blue-700 shadow-md shadow-blue-100 active:scale-[0.99] disabled:opacity-50 outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                     disabled={isSubmitted}
                   >
-                    {isSubmitted ? 'Message Dispatched ✓' : 'Transmit Message →'}
+                    {isSubmitted ? dict.contact.submittedText : dict.contact.submitText}
                   </button>
                 </div>
 

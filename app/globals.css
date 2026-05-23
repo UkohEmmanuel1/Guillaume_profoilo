@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-blue-600: #2563EB;
   --color-blue-500: #3B82F6;
@@ -15,6 +17,12 @@
   --color-slate-600: #475569;
   --color-slate-700: #334155;
   --color-slate-900: #0F172A;
+
+  --color-dark-bg: #0F172A;
+  --color-dark-surface: #1E293B;
+  --color-dark-border: #334155;
+  --color-dark-text: #E2E8F0;
+  --color-dark-muted: #94A3B8;
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);

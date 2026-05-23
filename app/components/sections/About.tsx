@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import { Container } from '@/app/components/ui/Container';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
-import { SITE_NAME, ABOUT_PARAGRAPHS } from '@/app/constants/content';
 
-export function About() {
+export function About({ dict }: { dict: any }) {
   return (
     <section className="relative bg-white py-20 sm:py-28 md:py-32 lg:py-36 border-b border-slate-100 overflow-hidden" id="about">
 
@@ -18,12 +17,12 @@ export function About() {
         {/* Section Header */}
         <div className="mb-16 md:mb-24 text-slate-900">
           <SectionHeader
-            label="Biography"
+            label={dict.about.label}
             title={
               <>
-                A Visionary Shaping
+                {dict.about.title1}
                 <br className="hidden sm:block" />
-                <em className="font-serif italic text-blue-600 font-normal">Africa&apos;s Energy Future</em>
+                <em className="font-serif italic text-blue-600 font-normal">{dict.about.titleEm}</em>
               </>
             }
           />
@@ -41,11 +40,12 @@ export function About() {
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-slate-100">
                   <Image
                     src="/assets/about.jpg"
-                    alt={`${SITE_NAME} portrait`}
+                    alt={dict.about.portraitAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 35vw, 400px"
                     className="object-cover brightness-[1.01] contrast-[1.01] grayscale-[10%] hover:grayscale-0 transition-all duration-700 ease-out hover:scale-[1.02]"
                     priority
+                    loading="eager"
                   />
                   {/* Elegant micro light overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent pointer-events-none" />
@@ -61,11 +61,11 @@ export function About() {
           {/* Right Column: Narrative Typography Block */}
           <div className="w-full">
             <div className="space-y-6 sm:space-y-8 lg:max-w-[620px]">
-              {ABOUT_PARAGRAPHS.map((p, index) => (
+              {dict.about.paragraphs.map((p: string, index: number) => (
                 <p
                   key={index}
                   className="text-[15px] md:text-[16px] font-light leading-[1.85] text-slate-600 tracking-normal drop-shadow-[0_0_1px_rgba(255,255,255,1)]"
-                  dangerouslySetInnerHTML={{ __html: p.text }}
+                  dangerouslySetInnerHTML={{ __html: p }}
                 />
               ))}
             </div>

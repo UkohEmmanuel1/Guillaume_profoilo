@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import { BlueButton } from '@/app/components/ui/BlueButton';
 import { GhostButton } from '@/app/components/ui/GhostButton';
-import { HERO_TAGLINE, HERO_HEADING_LINE1, HERO_HEADING_ACCENT, HERO_HEADING_LINE2, HERO_DESCRIPTION, SITE_NAME } from '@/app/constants/content';
 
-export function Hero() {
+export function Hero({ dict }: { dict: any }) {
   return (
     <section className="relative flex flex-col min-h-[calc(100vh-62px)] bg-slate-900 overflow-hidden md:grid md:grid-cols-[1fr_46%] lg:grid-cols-[1fr_43%]">
 
@@ -25,37 +24,35 @@ export function Hero() {
 
         {/* Tagline Accent */}
         <div className="mb-6 md:mb-10 flex animate-[fadeInUp_0.8s_both_0.1s] items-center gap-3 md:gap-4">
-          <div className="h-[1px] w-[30px] md:w-[40px] bg-blue-400/80" />
-          <span className="text-[10px] md:text-2xs uppercase tracking-[0.25em] md:tracking-[0.3em] font-semibold text-blue-400">
-            {HERO_TAGLINE}
-          </span>
+          
+          
         </div>
 
         {/* Dynamic Editorial Typography - Contrast adjusted for Blue backdrop */}
         <h1 className="mb-6 md:mb-8 font-serif text-[clamp(2.25rem,5.5vw,4rem)] font-light leading-[1.12] tracking-tight text-white animate-[fadeInUp_0.8s_both_0.2s]">
-          {HERO_HEADING_LINE1}
+          {dict.hero.headingLine1}
           <br />
-          <em className="font-serif italic text-blue-400 font-normal">{HERO_HEADING_ACCENT}</em>
+          <em className="font-serif italic text-blue-400 font-normal">{dict.hero.headingAccent}</em>
           <br />
-          {HERO_HEADING_LINE2}
+          {dict.hero.headingLine2}
         </h1>
 
         {/* Description Text */}
         <p className="mb-8 md:mb-12 max-w-[540px] text-[15px] font-light leading-[1.8] text-slate-300 animate-[fadeInUp_0.8s_both_0.3s] md:text-[16px]">
-          {HERO_DESCRIPTION}
+          {dict.hero.description}
         </p>
 
         {/* Fully Responsive CTA Button Group */}
         <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 animate-[fadeInUp_0.8s_both_0.4s]">
           <div className="w-full sm:w-auto">
             <BlueButton href="#speaking" className="w-full sm:w-auto justify-center text-center">
-              Book for Speaking
+              {dict.hero.ctaBook}
             </BlueButton>
           </div>
           <div className="w-full sm:w-auto">
             {/* Added standard border overrides to keep ghost clear against dark blue canvas */}
             <GhostButton href="#about" className="w-full sm:w-auto justify-center text-center text-white border-white/20 hover:bg-white/10">
-              Explore Journey
+              {dict.hero.ctaExplore}
             </GhostButton>
           </div>
           <div className="w-full sm:w-auto">
@@ -66,7 +63,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto justify-center text-center text-blue-400 border-blue-400/30 hover:bg-blue-400/10"
             >
-              Buy the Book
+              {dict.hero.ctaBuyBook}
             </GhostButton>
           </div>
         </div>
@@ -81,10 +78,11 @@ export function Hero() {
           {/* Inner Absolute Image Container */}
           <div className="absolute inset-2 sm:inset-3 rounded-sm overflow-hidden z-0 bg-slate-900">
             <Image
-              src="/assets/hero.jpg"
-              alt="Executive Portrait"
+              src="/assets/about.jpg"
+              alt={dict.hero.portraitAlt}
               fill
               priority
+              loading="eager"
               sizes="(max-width: 768px) 100vw, 45vw"
               className="object-cover object-center brightness-[1.02] contrast-[1.05] mix-blend-normal transition-transform duration-700 ease-out hover:scale-[1.02]"
             />
@@ -98,10 +96,10 @@ export function Hero() {
           {/* Frosted Glass Information Display Card */}
           <div className="relative z-10 m-3 sm:m-4 backdrop-blur-md bg-slate-900/80 border border-slate-700/50 p-4 sm:p-5 rounded shadow-lg transition-all duration-500 hover:bg-slate-900 hover:border-blue-500/50">
             <p className="text-[10px] md:text-[11px] uppercase tracking-widest text-blue-400 font-semibold mb-1">
-              Featured Publication
+              {dict.hero.featuredLabel}
             </p>
             <h3 className="font-serif text-sm sm:text-base md:text-md text-white font-light italic leading-tight">
-              "Electrochoc" Available Worldwide
+              {dict.hero.featuredText}
             </h3>
           </div>
 

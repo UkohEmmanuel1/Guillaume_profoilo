@@ -1,0 +1,163 @@
+{
+  "site": {
+    "name": "Guillaume Niarfeix",
+    "copyright": "© 2026 Guillaume Niarfeix. Tous droits réservés."
+  },
+  "nav": {
+    "links": [
+      { "label": "à propos", "href": "#about" },
+      { "label": "leadership", "href": "#leadership" },
+      { "label": "distinction", "href": "#award" },
+      { "label": "livre", "href": "#book" },
+      { "label": "conférences", "href": "#speaking" },
+      { "label": "contact", "href": "#contact" }
+    ],
+    "bookNow": "Réserver"
+  },
+  "hero": {
+    "tagline": "Directeur Général · SPIE Afrique de l'Ouest",
+    "headingLine1": "Un Leadership Stratégique",
+    "headingAccent": "pour l'Énergie",
+    "headingLine2": "à Travers l'Afrique",
+    "description": "Directeur Général de SPIE Afrique de l'Ouest, Président de la Chambre de Commerce et d'Industrie Franco-Nigériane, Auteur, Conférencier et Leader d'Affaires International.",
+    "ctaBook": "Invitez-le à Conférencer",
+    "ctaExplore": "Découvrir son Parcours",
+    "ctaBuyBook": "Acheter le Livre",
+    "featuredLabel": "Publication phare",
+    "featuredText": "« Electrochoc » Disponible dans le Monde Entier",
+    "portraitAlt": "Portrait Exécutif"
+  },
+  "ticker": {
+    "items": [
+      "SPIE Afrique de l'Ouest",
+      "Chambre de Commerce Franco-Nigériane",
+      "Chevalier de l'Ordre National du Mérite",
+      "Leader de la Transition Énergétique",
+      "Auteur d'Electrochoc",
+      "Diplomatie d'Affaires Franco-Africaine",
+      "Conférencier International"
+    ]
+  },
+  "stats": {
+    "items": [
+      { "label": "Années de Leadership", "target": 20, "suffix": "+" },
+      { "label": "Pays d'Influence", "target": 15, "suffix": "+" },
+      { "label": "Livre Publié", "target": 1, "suffix": "" },
+      { "label": "National du Mérite · 2025", "isSpecial": true }
+    ]
+  },
+  "about": {
+    "label": "Biographie",
+    "title1": "Un Visionnaire qui Façonne",
+    "titleEm": "l'Avenir Énergétique de l'Afrique",
+    "paragraphs": [
+      "<strong>Guillaume Niarfeix</strong> est un dirigeant d'entreprise français distingué, dont la carrière a été marquée par un leadership transformateur à l'intersection de <em>l'énergie, des infrastructures et de la diplomatie internationale</em>. En tant que Directeur Général de SPIE Afrique de l'Ouest, il dirige l'une des opérations d'ingénierie et de services énergétiques les plus stratégiques de la région.",
+      "Sa nomination en tant que <strong>Président de la Chambre de Commerce et d'Industrie Franco-Nigériane</strong> témoigne de sa position exceptionnelle en tant que pont entre l'expertise européenne et le dynamisme économique africain — favorisant les échanges commerciaux, l'investissement et la collaboration d'affaires au plus haut niveau.",
+      "Au-delà de ses fonctions exécutives, Guillaume s'est imposé comme un <strong>leader d'opinion</strong> et auteur, publiant <em>Electrochoc : Réarmer l'énergie</em> — un ouvrage percutant qui aborde les défis critiques de la transition énergétique et les impératifs stratégiques auxquels l'Afrique et l'Europe sont confrontées au XXIe siècle."
+    ],
+    "portraitAlt": "Portrait de Guillaume Niarfeix"
+  },
+  "leadership": {
+    "label": "Fonctions",
+    "title": "Portefeuille de",
+    "titleEm": "Leadership Exécutif",
+    "viewInitiatives": "Voir les Initiatives",
+    "cards": [
+      {
+        "num": "01",
+        "title": "Directeur Général",
+        "org": "SPIE Afrique de l'Ouest",
+        "desc": "À la tête de l'une des principales entreprises d'ingénierie et de services énergétiques d'Afrique de l'Ouest, il pilote l'excellence opérationnelle et l'expansion stratégique dans les secteurs d'infrastructure les plus critiques de la région."
+      },
+      {
+        "num": "02",
+        "title": "Président",
+        "org": "Chambre de Commerce Franco-Nigériane",
+        "desc": "Il favorise les relations économiques bilatérales entre la France et le Nigeria, facilitant le commerce, l'investissement et la diplomatie d'affaires au plus haut niveau institutionnel."
+      },
+      {
+        "num": "03",
+        "title": "Leader Stratégique en Énergie",
+        "org": "Infrastructures Internationales",
+        "desc": "Plus de deux décennies d'expertise dans les infrastructures énergétiques, la production d'électricité, le génie électrique et la transition stratégique vers des systèmes énergétiques durables à travers l'Afrique."
+      },
+      {
+        "num": "04",
+        "title": "Auteur",
+        "org": "Electrochoc : Réarmer l'énergie",
+        "desc": "Leader d'opinion publié, il aborde la géopolitique de l'énergie, la souveraineté énergétique de l'Afrique et les opportunités économiques de la transition énergétique accélérée."
+      },
+      {
+        "num": "05",
+        "title": "Conférencier International",
+        "org": "Conférences et Forums Mondiaux",
+        "desc": "Voix recherchée dans les forums internationaux sur la transition énergétique, les relations d'affaires Afrique-Europe, l'investissement dans les infrastructures et le leadership en développement durable."
+      },
+      {
+        "num": "06",
+        "title": "Diplomate d'Affaires",
+        "org": "Relations Franco-Africaines",
+        "desc": "Un pont entre l'expertise entrepreneuriale française et le leadership économique africain, favorisant la confiance institutionnelle, le dialogue politique et les partenariats à long terme entre deux continents."
+      }
+    ]
+  },
+  "award": {
+    "title": "Chevalier de l'Ordre National du Mérite",
+    "subtitle": "Chevalier de l'Ordre National du Mérite",
+    "date": "Décerné le 21 novembre 2025",
+    "label": "Distinction · 2025",
+    "description": "Le 21 novembre 2025, Guillaume Niarfeix a été fait Chevalier de l'Ordre National du Mérite par la République française — l'une des plus hautes distinctions civiles françaises.",
+    "republique": "République Française",
+    "galleryAlt1": "Document de la Cérémonie de Remise",
+    "galleryAlt2": "Médaille de Chevalier en Gros Plan",
+    "galleryAlt3": "Insigne Officiel de la République Française"
+  },
+  "book": {
+    "label": "Publication",
+    "title": "Le Livre Qui",
+    "titleEm": "Change la Conversation",
+    "heading": "Un manifeste pour la <em>souveraineté énergétique</em> et l'avenir du pouvoir en Afrique",
+    "description1": "Dans <em>Electrochoc : Réarmer l'énergie</em>, Guillaume Niarfeix livre une analyse stratégique audacieuse et sans concession de l'architecture énergétique mondiale.",
+    "subtitle": "Réarmer l'énergie",
+    "cta": "Commander sur Amazon",
+    "coverAlt": "Couverture officielle d'Electrochoc par Guillaume Niarfeix"
+  },
+  "speaking": {
+    "label": "Conférences",
+    "title": "Faites Appel à un",
+    "titleEm": "Conférencier d'Exception",
+    "description": "Guillaume Niarfeix apporte une combinaison rare d'autorité opérationnelle et de profondeur intellectuelle à chaque apparition en public, suscitant des discussions macro-critiques à l'échelle mondiale.",
+    "formTitle": "Demander une Intervention",
+    "formDescription": "Fournissez les détails de votre événement ci-dessous pour vérifier la disponibilité.",
+    "topics": [
+      { "number": 1, "title": "La Transition Énergétique en Afrique" },
+      { "number": 2, "title": "Relations d'Affaires Franco-Africaines" },
+      { "number": 3, "title": "Leadership Exécutif sur les Marchés Émergents" }
+    ]
+  },
+  "vision": {
+    "label": "Vision et Philosophie",
+    "quote": "« L'avenir énergétique de l'Afrique n'est pas un problème à résoudre — c'est une opportunité à saisir. »"
+  },
+  "contact": {
+    "label": "Contact et Conseil",
+    "heading": "Contactez-nous pour des",
+    "headingEm": "Initiatives et Panels Stratégiques",
+    "description": "Sollicitez Guillaume Niarfeix pour la gouvernance d'entreprise, l'analyse de la politique énergétique internationale de haut niveau, les briefings consultatifs institutionnels privés ou les commentaires médiatiques clés.",
+    "officeLabel": "Bureau Exécutif",
+    "officeEmail": "relations@guillaumeniarfeix.com",
+    "formTitle": "Bureau de Correspondance Directe",
+    "formDescription": "Veuillez soumettre vos coordonnées ci-dessous pour établir une ligne de contact directe.",
+    "nameLabel": "Nom Complet",
+    "namePlaceholder": "Ex. : Jean-Marc Aubert",
+    "emailLabel": "Adresse E-mail Professionnelle",
+    "emailPlaceholder": "Ex. : j.aubert@entreprise.com",
+    "messageLabel": "Objet du Briefing",
+    "messagePlaceholder": "Décrivez les paramètres de votre invitation ou le périmètre du projet...",
+    "submitText": "Envoyer le Message →",
+    "submittedText": "Message Envoyé ✓"
+  },
+  "footer": {
+    "viewInitiatives": "Voir les Initiatives"
+  }
+}

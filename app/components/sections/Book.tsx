@@ -2,9 +2,8 @@ import Image from 'next/image';
 import { Container } from '@/app/components/ui/Container';
 import { SectionHeader } from '@/app/components/ui/SectionHeader';
 import { BlueButton } from '@/app/components/ui/BlueButton';
-import { BOOK_TITLE, BOOK_SUBTITLE } from '@/app/constants/content';
 
-export function Book() {
+export function Book({ dict }: { dict: any }) {
   return (
     <section className="relative bg-white border-b border-slate-100 py-16 sm:py-24 md:py-32 overflow-hidden" id="book">
       
@@ -17,12 +16,12 @@ export function Book() {
 
         <div className="mb-12 md:mb-20 text-slate-900">
           <SectionHeader
-            label="Publication"
+            label={dict.book.label}
             title={
               <>
-                The Book That
+                {dict.book.title}
                 <br className="hidden sm:block" />
-                <em className="font-serif italic text-blue-600 font-normal">Changes the Conversation</em>
+                <em className="font-serif italic text-blue-600 font-normal">{dict.book.titleEm}</em>
               </>
             }
           />
@@ -36,7 +35,7 @@ export function Book() {
               <div className="relative w-full h-full rounded-sm overflow-hidden shadow-[5px_5px_20px_rgba(15,23,42,0.18)] border border-slate-200/40 transform group-hover:scale-[1.015] group-hover:-rotate-1 transition-transform duration-500 ease-out">
                 <Image
                   src="/assets/book.jpg"
-                  alt={`Official Publication Cover for ${BOOK_TITLE} by Guillaume Niarfeix`}
+                  alt={dict.book.coverAlt}
                   fill
                   priority
                   sizes="(max-width: 768px) 280px, 320px"
@@ -51,19 +50,14 @@ export function Book() {
 
           <div className="order-2 md:order-1">
 
-            <h3 className="mb-6 font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-light leading-[1.25] tracking-tight text-slate-900">
-              A manifesto for{' '}
-              <em className="font-serif italic text-blue-600 font-normal">energy sovereignty</em> and the
-              future of power in Africa
-            </h3>
+            <h3 className="mb-6 font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-light leading-[1.25] tracking-tight text-slate-900"
+              dangerouslySetInnerHTML={{ __html: dict.book.heading }}
+            />
 
             <div className="space-y-4 mb-8 text-[15px] md:text-[16px] font-light leading-[1.8] text-slate-600 max-w-[540px]">
-              <p>
-                In <em className="italic font-normal text-slate-800">Electrochoc: Réarmer l&apos;énergie</em>,
-                Guillaume Niarfeix delivers a bold, unflinching strategic analysis of the global energy architecture.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: dict.book.description1 }} />
               <p className="text-sm text-slate-500 font-light">
-                {BOOK_SUBTITLE}
+                {dict.book.subtitle}
               </p>
             </div>
 
@@ -74,7 +68,7 @@ export function Book() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto justify-center text-center"
               >
-                Order on Amazon
+                {dict.book.cta}
               </BlueButton>
             </div>
 

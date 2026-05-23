@@ -1,17 +1,15 @@
 import Image from 'next/image';
 import { Container } from '@/app/components/ui/Container';
-import { AWARD_TITLE, AWARD_SUBTITLE, AWARD_DATE } from '@/app/constants/content';
 
-const GALLERY = [
-  { src: '/assets/image_1.jpg', alt: 'Award Ceremony Document' },
-  { src: '/assets/image_2.jpg', alt: 'Chevalier Medal Close-up' },
-  { src: '/assets/image_3.jpg', alt: 'Official French Republic Insignia' },
-  { src: '/assets/image_1.jpg', alt: 'Award Ceremony Document' },
-  { src: '/assets/image_2.jpg', alt: 'Chevalier Medal Close-up' },
-  { src: '/assets/image_3.jpg', alt: 'Official French Republic Insignia' },
-];
-
-export function Award() {
+export function Award({ dict }: { dict: any }) {
+  const GALLERY = [
+    { src: '/assets/image_1.jpg', alt: dict.award.galleryAlt1 },
+    { src: '/assets/image_2.jpg', alt: dict.award.galleryAlt2 },
+    { src: '/assets/image_3.jpg', alt: dict.award.galleryAlt3 },
+    { src: '/assets/image_1.jpg', alt: dict.award.galleryAlt1 },
+    { src: '/assets/image_2.jpg', alt: dict.award.galleryAlt2 },
+    { src: '/assets/image_3.jpg', alt: dict.award.galleryAlt3 },
+  ];
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
@@ -66,7 +64,7 @@ export function Award() {
               <div className="flex items-center gap-2">
                 <span className="h-px w-6 bg-slate-300" />
                 <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-400">
-                  République Française
+                  {dict.award.republique}
                 </span>
                 <span className="h-px w-6 bg-slate-300" />
               </div>
@@ -78,27 +76,25 @@ export function Award() {
               <div className="mb-5 flex items-center gap-3">
                 <div className="h-px w-6 bg-blue-600/60" />
                 <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-blue-600">
-                  Recognition · 2025
+                  {dict.award.label}
                 </span>
               </div>
 
               <h2 className="mb-5 font-serif text-[clamp(1.8rem,3vw,3.2rem)] font-light leading-[1.15] tracking-tight text-slate-900">
-                {AWARD_TITLE}
+                {dict.award.title}
               </h2>
 
               <p className="mb-6 font-serif text-[1.1rem] italic leading-relaxed text-slate-500">
-                {AWARD_SUBTITLE}
+                {dict.award.subtitle}
               </p>
 
               <p className="mb-10 max-w-[520px] text-[15px] font-light leading-[1.8] text-slate-600">
-                On November 21, 2025, Guillaume Niarfeix was awarded the prestigious Chevalier de
-                l&apos;Ordre National du Mérite by the French Republic — one of France&apos;s highest
-                civilian honours.
+                {dict.award.description}
               </p>
 
               <div className="inline-flex items-center gap-3 rounded-md border border-blue-600/15 bg-blue-600/[0.02] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600">
 
-                <span>{AWARD_DATE}</span>
+                <span>{dict.award.date}</span>
               </div>
             </div>
 

@@ -1,0 +1,163 @@
+{
+  "site": {
+    "name": "Guillaume Niarfeix",
+    "copyright": "© 2026 Guillaume Niarfeix. All rights reserved."
+  },
+  "nav": {
+    "links": [
+      { "label": "about", "href": "#about" },
+      { "label": "leadership", "href": "#leadership" },
+      { "label": "recognition", "href": "#award" },
+      { "label": "book", "href": "#book" },
+      { "label": "speaking", "href": "#speaking" },
+      { "label": "contact", "href": "#contact" }
+    ],
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "tagline": "Managing Director · SPIE West Africa",
+    "headingLine1": "Driving Strategic",
+    "headingAccent": "Energy Leadership",
+    "headingLine2": "Across Africa",
+    "description": "Managing Director of SPIE West Africa, President of the Franco Nigerian Chamber of Commerce and Industry, Author, Speaker, and International Business Leader.",
+    "ctaBook": "Book for Speaking",
+    "ctaExplore": "Explore Journey",
+    "ctaBuyBook": "Buy the Book",
+    "featuredLabel": "Featured Publication",
+    "featuredText": "\"Electrochoc\" Available Worldwide",
+    "portraitAlt": "Executive Portrait"
+  },
+  "ticker": {
+    "items": [
+      "SPIE West Africa",
+      "Franco Nigerian Chamber of Commerce",
+      "Chevalier de l'Ordre National du Mérite",
+      "Energy Transition Leader",
+      "Electrochoc Author",
+      "Franco-African Business Diplomacy",
+      "International Speaker"
+    ]
+  },
+  "stats": {
+    "items": [
+      { "label": "Years of Leadership", "target": 20, "suffix": "+" },
+      { "label": "Countries of Influence", "target": 15, "suffix": "+" },
+      { "label": "Published Book", "target": 1, "suffix": "" },
+      { "label": "National du Mérite · 2025", "isSpecial": true }
+    ]
+  },
+  "about": {
+    "label": "Biography",
+    "title1": "A Visionary Shaping",
+    "titleEm": "Africa's Energy Future",
+    "paragraphs": [
+      "<strong>Guillaume Niarfeix</strong> is a distinguished French business executive whose career has been defined by transformative leadership at the intersection of <em>energy, infrastructure, and international diplomacy</em>. As Managing Director of SPIE West Africa, he leads one of the region's most strategically significant engineering and energy service operations.",
+      "His appointment as <strong>President of the Franco Nigerian Chamber of Commerce and Industry</strong> reflects his exceptional standing as a bridge between European expertise and African economic dynamism — championing bilateral trade, investment, and business collaboration at the highest levels.",
+      "Beyond his executive roles, Guillaume has established himself as a <strong>thought leader</strong> and author, publishing <em>Electrochoc: Réarmer l'énergie</em> — a compelling work addressing the critical challenges of energy transition and the strategic imperatives facing Africa and Europe in the 21st century."
+    ],
+    "portraitAlt": "Guillaume Niarfeix portrait"
+  },
+  "leadership": {
+    "label": "Positions",
+    "title": "Executive",
+    "titleEm": "Leadership Portfolio",
+    "viewInitiatives": "View Initiatives",
+    "cards": [
+      {
+        "num": "01",
+        "title": "Managing Director",
+        "org": "SPIE West Africa",
+        "desc": "Leading one of West Africa's foremost engineering and energy service enterprises, driving operational excellence and strategic expansion across the region's most critical infrastructure sectors."
+      },
+      {
+        "num": "02",
+        "title": "President",
+        "org": "Franco-Nigerian Chamber of Commerce",
+        "desc": "Championing bilateral economic relations between France and Nigeria, facilitating trade, investment, and business diplomacy at the highest institutional level."
+      },
+      {
+        "num": "03",
+        "title": "Strategic Energy Leader",
+        "org": "International Infrastructure",
+        "desc": "Over two decades of expertise in energy infrastructure, power generation, electrical engineering, and the strategic transition to sustainable energy systems across Africa."
+      },
+      {
+        "num": "04",
+        "title": "Author",
+        "org": "Electrochoc: Réarmer l'énergie",
+        "desc": "Published thought leader addressing the geopolitics of energy, Africa's energy sovereignty, and the economic opportunities of the accelerated energy transition."
+      },
+      {
+        "num": "05",
+        "title": "International Speaker",
+        "org": "Global Conferences & Forums",
+        "desc": "Sought-after voice at international forums on energy transition, Africa-Europe business relations, infrastructure investment, and sustainable development leadership."
+      },
+      {
+        "num": "06",
+        "title": "Business Diplomat",
+        "org": "Franco-African Relations",
+        "desc": "A bridge between French enterprise expertise and African economic leadership, fostering institutional trust, policy dialogue, and long-term partnerships across two continents."
+      }
+    ]
+  },
+  "award": {
+    "title": "Knight of the National Order of Merit",
+    "subtitle": "Knight of the National Order of Merit",
+    "date": "Awarded November 21, 2025",
+    "label": "Recognition · 2025",
+    "description": "On November 21, 2025, Guillaume Niarfeix was awarded the prestigious Knight of the National Order of Merit by the French Republic  one of France's highest civilian honours.",
+    "republique": "République Française",
+    "galleryAlt1": "Award Ceremony Document",
+    "galleryAlt2": "Chevalier Medal Close-up",
+    "galleryAlt3": "Official French Republic Insignia"
+  },
+  "book": {
+    "label": "Publication",
+    "title": "The Book That",
+    "titleEm": "Changes the Conversation",
+    "heading": "A manifesto for <em>energy sovereignty</em> and the future of power in Africa",
+    "description1": "In <em>Electrochoc: Réarmer l'énergie</em>, Guillaume Niarfeix delivers a bold, unflinching strategic analysis of the global energy architecture.",
+    "subtitle": "Réarmer l'énergie",
+    "cta": "Order on Amazon",
+    "coverAlt": "Official Publication Cover for Electrochoc by Guillaume Niarfeix"
+  },
+  "speaking": {
+    "label": "Speaking",
+    "title": "Engage a World-Class",
+    "titleEm": "Executive Speaker",
+    "description": "Guillaume Niarfeix brings a rare combination of operational authority and intellectual depth to every stage appearance, sparking critical macro discussions worldwide.",
+    "formTitle": "Request an Engagement",
+    "formDescription": "Provide your event logistics below to check schedule availability.",
+    "topics": [
+      { "number": 1, "title": "The Energy Transition in Africa" },
+      { "number": 2, "title": "Franco-African Business Relations" },
+      { "number": 3, "title": "Executive Leadership in Emerging Markets" }
+    ]
+  },
+  "vision": {
+    "label": "Vision & Philosophy",
+    "quote": "\"Africa's energy future is not a problem to be solved — it is an opportunity to be seized.\""
+  },
+  "contact": {
+    "label": "Contact & Advisory",
+    "heading": "Connect for Strategic",
+    "headingEm": "Initiatives & Panels",
+    "description": "Secure Guillaume Niarfeix for corporate governance, high-level international energy policy analysis, private institutional advisory briefings, or key media commentary.",
+    "officeLabel": "Executive Office",
+    "officeEmail": "relations@guillaumeniarfeix.com",
+    "formTitle": "Direct Correspondence Office",
+    "formDescription": "Please submit details below to establish direct lines of inquiry.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "e.g., Jean-Marc Aubert",
+    "emailLabel": "Corporate Email Address",
+    "emailPlaceholder": "e.g., j.aubert@company.com",
+    "messageLabel": "Brief Briefing Scope",
+    "messagePlaceholder": "Outline your invitation parameters or project scope...",
+    "submitText": "Transmit Message →",
+    "submittedText": "Message Dispatched ✓"
+  },
+  "footer": {
+    "viewInitiatives": "View Initiatives"
+  }
+}
