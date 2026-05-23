@@ -79,7 +79,12 @@ export function Navbar({ dict }: { dict: any }) {
               {link.label}
             </a>
           ))}
-          <BlueButton as="button" onClick={() => setOpen(false)} className="mt-3 w-full sm:hidden">
+          <BlueButton 
+            href="#speaking" 
+            as="a" 
+            onClick={() => setOpen(false)} 
+            className="mt-3 w-full sm:hidden"
+          >
             {dict.nav.bookNow}
           </BlueButton>
         </div>
