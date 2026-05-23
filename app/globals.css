@@ -18,11 +18,11 @@
   --color-slate-700: #334155;
   --color-slate-900: #0F172A;
 
-  --color-dark-bg: #0F172A;
-  --color-dark-surface: #1E293B;
-  --color-dark-border: #334155;
+  --color-dark-bg: #0B1120;
+  --color-dark-surface: #162032;
+  --color-dark-border: #1E2A45;
   --color-dark-text: #E2E8F0;
-  --color-dark-muted: #94A3B8;
+  --color-dark-muted: #7F8EA3;
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
